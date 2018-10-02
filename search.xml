@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Hexo搭建Blog]]></title>
+    <url>%2F2018%2F10%2F02%2FHexo%2F</url>
+    <content type="text"><![CDATA[一直有搭建blog的想法，以前都是零散的记录在各个地方，现在终于有一个统一记录的地方啦✿✿ヽ(°▽°)ノ✿ 网上可供参考的文字已经很多很多啦，在这主要贴两个 SunYan’s Blog 建留言板 当然还有其他的网站~~ 感谢分享！以后争取周更！顺便挖个坑： 加百度sitemap 优化SEO 美化blog 最近还要努力读文献写作业看视频…ヾ(◍°∇°◍)ﾉﾞ]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[学习markdown]]></title>
     <url>%2F2018%2F10%2F02%2F%E5%AD%A6%E4%B9%A0markdown%2F</url>
     <content type="text"><![CDATA[一级标题二级标题三级标题 列表1 列表2 a 子列表1 b 子列表2 列表3 我的CSDN链接 字体是斜的 字体加粗 引入代码行,切换为英文状态，点tab键：&lt;html&gt;&lt;/html&gt; 1234567&lt;html&gt; &lt;head&gt; &lt;title&gt;标题&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;/body&gt;&lt;/html&gt; 引用 这是引用啦]]></content>
