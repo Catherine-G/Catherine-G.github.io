@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[git连接github提示Permission denied (publickey)]]></title>
+    <url>%2F2019%2F07%2F29%2Fgit%E8%BF%9E%E6%8E%A5github%E6%8F%90%E7%A4%BAPermission-denied-publickey%2F</url>
+    <content type="text"><![CDATA[一、问题使用git连接github可能会出现Permission denied (publickey)问题。 使用命令：ssh -T git@github.com 错误： Permission denied (publickey) 二、排查原因1、检查之前是否配置git config user.name git config user.email 2、使用命令查看原因ssh -T -v git@github.com 发现是没有找到“id_rsa”等文件 3、查看文件ls ~/.ssh 检查有无1中的文件 若无，生成SSH密钥并在github中配置。参见—-&gt;生成SSH密钥连接github 若有，检查id_rsa.pub文件中的末尾email和git是否一致，不一致，重新生成。 （经检查发现有这一文件，但是email不一致，所以我重新生成并设置了SSH密钥解决了问题 三、连接ssh -T git@github.com 如果提示如下，说明连接成功 Hi Catherine-G! You&#39;ve successfully authenticated, but GitHub does not provide s hell access. 四、总结就像电脑出现问题重启、重装，github连接不成功，重新生成SSH密钥就可以啦。]]></content>
+      <categories>
+        <category>错误集锦</category>
+      </categories>
+      <tags>
+        <tag>error</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[对RESTful接口的理解]]></title>
     <url>%2F2019%2F07%2F22%2F%E5%AF%B9restful%E6%8E%A5%E5%8F%A3%E7%9A%84%E7%90%86%E8%A7%A3%2F</url>
     <content type="text"><![CDATA[RESTful 实习中的公司实现了前后端分离，后端会给前端接口文档，根据这份文档前后端各自进行开发，然后就发现HTTP请求的动词很统一，不外乎就是“GET、POST、DELETE、PUT”，在请教了小姐姐小哥哥之后发现组内开发的接口风格叫RESTful，所以就来学习一下。 前端的设备多种多样，为了方便不同的前端设备和后端进行通信，必须有一种统一的机制。目前最流行的是restful风格接口。 RESTful架构是目前最流行的一种互联网软件架构。符合以下三点要求的便是RESTful架构 1、每一个URI代表一种资源2、客户端和服务器之间，传递这种资源的表现层3、客户端通过四个HTTP动词对服务器端资源进行操作，实现“表现层状态转化” HTTP动词 GET 从服务器取资源 POST 在服务器新建一个资源 PUT 更新资源（客户端提供完整资源） PATCH 在服务器更新资源（只提供可改变的属性） DELETE 从服务器删资源 HEAD 获取资源的元数据OPTIONS 获取信息（只关于那些客户端可改变的） 状态码 200 OK - [GET]：服务器成功返回用户请求的数据201 CREATED - [POST/PUT/PATCH]：用户新建或修改数据成功202 Accepted - []：表示一个请求已经进入后台排队（异步任务）204 NO CONTENT - [DELETE]：用户删除数据成功400 INVALID REQUEST - [POST/PUT/PATCH]：用户发出的请求有错误，服务器没有进行新建或修改数据的操作401 Unauthorized - []：表示用户没有权限（令牌、用户名、密码错误）403 Forbidden - [] 表示用户得到授权（与401错误相对），但是访问是被禁止的404 NOT FOUND - []：用户发出的请求针对的是不存在的记录，服务器没有进行操作406 Not Acceptable - [GET]：用户请求的格式不可得（比如用户请求JSON格式，但是只有XML格式）410 Gone -[GET]：用户请求的资源被永久删除，且不会再得到的422 Unprocesable entity - [POST/PUT/PATCH] 当创建一个对象时，发生一个验证错误500 INTERNAL SERVER ERROR - [*]：服务器发生错误，用户将无法判断发出的请求是否成功 restful风格接口的好处：接口名称相同,请求method,通过 RequestMethod.GET/POST/PUT/DELETE来区别,就可以实现增删改查。 总结： 满足以上所说的原则和条件的接口就是RESTful。 这种风格的接口很统一，对于前端来讲非常方便。 目前我对restful的理解就这么多啦，有不当之处还请大家多多指正！ 小吐槽：发现有些后端同学很喜欢用POST，不论是什么接口都是POST，无语=.= 参考文档：[1] restful最佳实践[2] restful [3] restful API设计]]></content>
@@ -12,7 +23,7 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[rreact用link实现搜索条件]]></title>
+    <title><![CDATA[react用link实现搜索条件]]></title>
     <url>%2F2019%2F07%2F22%2Freact%E7%94%A8link%E5%AE%9E%E7%8E%B0%E6%90%9C%E7%B4%A2%E6%9D%A1%E4%BB%B6%2F</url>
     <content type="text"><![CDATA[在页面上方使用四个link来控制页面内容的条件展示，可展示不同搜索条件下的内容。可用js实现首先在状态机里定义： stateArr: [ {&apos;id&apos;:1,&apos;state&apos;:false}, {&apos;id&apos;:2,&apos;state&apos;:false}, {&apos;id&apos;:3,&apos;state&apos;:false}, {&apos;id&apos;:4,&apos;state&apos;:false}, ], 点击link时调用onclick方法，在该方法内判断参数id【此处传递参数1、2、3、4来表示四个link】 if(stateArr[num-1].state == false){ const params = { id: id, }; dispatch({ type: &apos;list/getList&apos;, payload: params, }); stateArr[num-1].state= true; }else{ // todo 展示全部list stateArr[num-1].state= false; }]]></content>
       <categories>
