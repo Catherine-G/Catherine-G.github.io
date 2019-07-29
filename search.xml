@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[git连接github提示Permission denied (publickey)]]></title>
     <url>%2F2019%2F07%2F29%2Fgit%E8%BF%9E%E6%8E%A5github%E6%8F%90%E7%A4%BAPermission-denied-publickey%2F</url>
-    <content type="text"><![CDATA[一、问题使用git连接github可能会出现Permission denied (publickey)问题。 使用命令：ssh -T git@github.com 错误： Permission denied (publickey) 二、排查原因1、检查之前是否配置git config user.name git config user.email 2、使用命令查看原因ssh -T -v git@github.com 发现是没有找到“id_rsa”等文件 3、查看文件ls ~/.ssh 检查有无1中的文件 若无，生成SSH密钥并在github中配置。参见—-&gt;生成SSH密钥连接github 若有，检查id_rsa.pub文件中的末尾email和git是否一致，不一致，重新生成。 （经检查发现有这一文件，但是email不一致，所以我重新生成并设置了SSH密钥解决了问题 三、连接ssh -T git@github.com 如果提示如下，说明连接成功 Hi Catherine-G! You&#39;ve successfully authenticated, but GitHub does not provide s hell access. 四、总结就像电脑出现问题重启、重装，github连接不成功，重新生成SSH密钥就可以啦。]]></content>
+    <content type="text"><![CDATA[一、问题使用git连接github可能会出现Permission denied (publickey)问题。 使用命令：ssh -T git@github.com 错误： Permission denied (publickey) 二、排查原因1、检查之前是否配置git config user.name git config user.email 2、使用命令查看原因ssh -T -v git@github.com 发现是没有找到“id_rsa”等文件 3、查看文件ls ~/.ssh 检查有无1中的文件 若无，生成SSH密钥并在github中配置。参见： SSH密钥 生成SSH密钥连接github 若有，检查id_rsa.pub文件中的末尾email和git是否一致，不一致，重新生成。 （经检查发现有这一文件，但是email不一致，所以我重新生成并设置了SSH密钥解决了问题 三、连接ssh -T git@github.com 如果提示如下，说明连接成功 Hi Catherine-G! You&#39;ve successfully authenticated, but GitHub does not provide s hell access. 四、总结就像电脑出现问题重启、重装，github连接不成功，重新生成SSH密钥就可以啦。]]></content>
       <categories>
         <category>错误集锦</category>
       </categories>

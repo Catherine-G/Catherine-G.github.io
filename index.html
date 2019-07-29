@@ -399,7 +399,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  244
+                  246
                 </span>
               
 
@@ -447,7 +447,9 @@
 <p>发现是没有找到“id_rsa”等文件</p>
 <h2 id="3、查看文件"><a href="#3、查看文件" class="headerlink" title="3、查看文件"></a>3、查看文件</h2><p><code>ls ~/.ssh</code></p>
 <p>检查有无1中的文件</p>
-<p>若无，生成SSH密钥并在github中配置。参见—-&gt;<a href="https://blog.csdn.net/lucky__yang/article/details/80148420" target="_blank" rel="noopener">生成SSH密钥连接github</a></p>
+<p>若无，生成SSH密钥并在github中配置。参见：</p>
+<p><a href="https://blog.csdn.net/huang3513/article/details/52837075" target="_blank" rel="noopener">SSH密钥</a></p>
+<p><a href="https://blog.csdn.net/lucky__yang/article/details/80148420" target="_blank" rel="noopener">生成SSH密钥连接github</a></p>
 <p>若有，检查id_rsa.pub文件中的末尾email和git是否一致，不一致，重新生成。</p>
 <p>（经检查发现有这一文件，但是email不一致，所以我重新生成并设置了SSH密钥解决了问题</p>
 <h1 id="三、连接"><a href="#三、连接" class="headerlink" title="三、连接"></a>三、连接</h1><p><code>ssh -T git@github.com</code></p>
