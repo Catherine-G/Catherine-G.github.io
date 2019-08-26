@@ -1479,7 +1479,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  193
+                  194
                 </span>
               
 
@@ -1521,10 +1521,10 @@
             <p><strong>值</strong>： [&lt; length &gt; | &lt; percentage &gt; | auto ] {1,4} | inherit<br><strong>初始值</strong>：未定义<br><strong>百分数</strong>：相对于<strong>父元素的width</strong>计算</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">h1 &#123;margin: 10px 20px 15px 5px&#125;</span><br><span class="line">            top  right bottom left.</span><br></pre></td></tr></table></figure>
 <p>   从上（top）开始围着元素顺时针旋转。单位：px in em ex等等。</p>
-<h1 id="值复制："><a href="#值复制：" class="headerlink" title="值复制："></a>值复制：</h1><p>以下两种写法效果一样<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">p &#123;margin: 0.25em 1em 0.25em 1em&#125;  </span><br><span class="line">p &#123;margin: 0.25em 1em&#125;</span><br></pre></td></tr></table></figure></p>
+<h1><span id="zhi-fu-zhi">值复制：</span><a href="#zhi-fu-zhi" class="header-anchor">#</a></h1><p>以下两种写法效果一样<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">p &#123;margin: 0.25em 1em 0.25em 1em&#125;  </span><br><span class="line">p &#123;margin: 0.25em 1em&#125;</span><br></pre></td></tr></table></figure></p>
 <p>  若缺left ———&gt; 使用right的值<br>  若缺bottom ———&gt; 使用top的值<br>  若缺right ———&gt; 使用top的值</p>
 <p><img src="https://img-blog.csdnimg.cn/20190819175943293.png" alt="margin值复制"></p>
-<h1 id="margin合并现象"><a href="#margin合并现象" class="headerlink" title="margin合并现象"></a>margin合并现象</h1><p>相邻margin会发生合并现象，两个margin中较小的一个会被<strong>较大的</strong>一个合并。</p>
+<h1><span id="margin-he-bing-xian-xiang">margin合并现象</span><a href="#margin-he-bing-xian-xiang" class="header-anchor">#</a></h1><p>相邻margin会发生合并现象，两个margin中较小的一个会被<strong>较大的</strong>一个合并。</p>
 <ul>
 <li>若是正的，margin取两个的最大值</li>
 <li>若是负的，则取绝对值的最大值</li>
@@ -1942,24 +1942,24 @@
       
         
           
-            <h1 id="一、问题"><a href="#一、问题" class="headerlink" title="一、问题"></a>一、问题</h1><p>使用git连接github可能会出现Permission denied (publickey)问题。</p>
+            <h1><span id="yi-wen-ti">一、问题</span><a href="#yi-wen-ti" class="header-anchor">#</a></h1><p>使用git连接github可能会出现Permission denied (publickey)问题。</p>
 <p>使用命令：<code>ssh -T git@github.com</code></p>
 <p>错误： <code>Permission denied (publickey)</code></p>
-<h1 id="二、排查原因"><a href="#二、排查原因" class="headerlink" title="二、排查原因"></a>二、排查原因</h1><h2 id="1、检查之前是否配置"><a href="#1、检查之前是否配置" class="headerlink" title="1、检查之前是否配置"></a>1、检查之前是否配置</h2><p><code>git config user.name</code></p>
+<h1><span id="er-pai-cha-yuan-yin">二、排查原因</span><a href="#er-pai-cha-yuan-yin" class="header-anchor">#</a></h1><h2><span id="1-jian-cha-zhi-qian-shi-fou-pei-zhi">1、检查之前是否配置</span><a href="#1-jian-cha-zhi-qian-shi-fou-pei-zhi" class="header-anchor">#</a></h2><p><code>git config user.name</code></p>
 <p><code>git config user.email</code></p>
-<h2 id="2、使用命令查看原因"><a href="#2、使用命令查看原因" class="headerlink" title="2、使用命令查看原因"></a>2、使用命令查看原因</h2><p><code>ssh -T -v git@github.com</code></p>
+<h2><span id="2-shi-yong-ming-ling-cha-kan-yuan-yin">2、使用命令查看原因</span><a href="#2-shi-yong-ming-ling-cha-kan-yuan-yin" class="header-anchor">#</a></h2><p><code>ssh -T -v git@github.com</code></p>
 <p>发现是没有找到“id_rsa”等文件</p>
-<h2 id="3、查看文件"><a href="#3、查看文件" class="headerlink" title="3、查看文件"></a>3、查看文件</h2><p><code>ls ~/.ssh</code></p>
+<h2><span id="3-cha-kan-wen-jian">3、查看文件</span><a href="#3-cha-kan-wen-jian" class="header-anchor">#</a></h2><p><code>ls ~/.ssh</code></p>
 <p>检查有无1中的文件</p>
 <p>若无，生成SSH密钥并在github中配置。参见：</p>
 <p><a href="https://blog.csdn.net/huang3513/article/details/52837075" target="_blank" rel="noopener">SSH密钥</a></p>
 <p><a href="https://blog.csdn.net/lucky__yang/article/details/80148420" target="_blank" rel="noopener">生成SSH密钥连接github</a></p>
 <p>若有，检查id_rsa.pub文件中的末尾email和git是否一致，不一致，重新生成。</p>
 <p>（经检查发现有这一文件，但是email不一致，所以我重新生成并设置了SSH密钥解决了问题</p>
-<h1 id="三、连接"><a href="#三、连接" class="headerlink" title="三、连接"></a>三、连接</h1><p><code>ssh -T git@github.com</code></p>
+<h1><span id="san-lian-jie">三、连接</span><a href="#san-lian-jie" class="header-anchor">#</a></h1><p><code>ssh -T git@github.com</code></p>
 <p>如果提示如下，说明连接成功</p>
 <p><code>Hi Catherine-G! You&#39;ve successfully authenticated, but GitHub does not provide s    hell access.</code></p>
-<h1 id="四、总结"><a href="#四、总结" class="headerlink" title="四、总结"></a>四、总结</h1><p>就像电脑出现问题重启、重装，github连接不成功，重新生成SSH密钥就可以啦。</p>
+<h1><span id="si-zong-jie">四、总结</span><a href="#si-zong-jie" class="header-anchor">#</a></h1><p>就像电脑出现问题重启、重装，github连接不成功，重新生成SSH密钥就可以啦。</p>
 
           
         
@@ -2142,7 +2142,7 @@
       
         
           
-            <h1 id="RESTful"><a href="#RESTful" class="headerlink" title="RESTful"></a>RESTful</h1><blockquote>
+            <h1><span id="restful">RESTful</span><a href="#restful" class="header-anchor">#</a></h1><blockquote>
 <p>实习中的公司实现了前后端分离，后端会给前端接口文档，根据这份文档前后端各自进行开发，然后就发现HTTP请求的动词很统一，不外乎就是“GET、POST、DELETE、PUT”，在请教了小姐姐小哥哥之后发现组内开发的接口风格叫RESTful，所以就来学习一下。</p>
 <p>前端的设备多种多样，为了方便不同的前端设备和后端进行通信，必须有一种统一的机制。目前最流行的是restful风格接口。</p>
 </blockquote>

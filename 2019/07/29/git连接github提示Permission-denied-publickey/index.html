@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="一、问题使用git连接github可能会出现Permission denied (publickey)问题。 使用命令：ssh -T git@github.com 错误： Permission denied (publickey) 二、排查原因1、检查之前是否配置git config user.name git config user.email 2、使用命令查看原因ssh -T -v git@g">
+<meta name="description" content="一、问题#使用git连接github可能会出现Permission denied (publickey)问题。 使用命令：ssh -T git@github.com 错误： Permission denied (publickey) 二、排查原因#1、检查之前是否配置#git config user.name git config user.email 2、使用命令查看原因#ssh -T -v g">
 <meta name="keywords" content="error">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git连接github提示Permission denied (publickey)">
 <meta property="og:url" content="http://yoursite.com/2019/07/29/git连接github提示Permission-denied-publickey/index.html">
 <meta property="og:site_name" content="Xinxin&#39;s Blog">
-<meta property="og:description" content="一、问题使用git连接github可能会出现Permission denied (publickey)问题。 使用命令：ssh -T git@github.com 错误： Permission denied (publickey) 二、排查原因1、检查之前是否配置git config user.name git config user.email 2、使用命令查看原因ssh -T -v git@g">
+<meta property="og:description" content="一、问题#使用git连接github可能会出现Permission denied (publickey)问题。 使用命令：ssh -T git@github.com 错误： Permission denied (publickey) 二、排查原因#1、检查之前是否配置#git config user.name git config user.email 2、使用命令查看原因#ssh -T -v g">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2019-07-29T07:46:15.720Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git连接github提示Permission denied (publickey)">
-<meta name="twitter:description" content="一、问题使用git连接github可能会出现Permission denied (publickey)问题。 使用命令：ssh -T git@github.com 错误： Permission denied (publickey) 二、排查原因1、检查之前是否配置git config user.name git config user.email 2、使用命令查看原因ssh -T -v git@g">
+<meta name="twitter:description" content="一、问题#使用git连接github可能会出现Permission denied (publickey)问题。 使用命令：ssh -T git@github.com 错误： Permission denied (publickey) 二、排查原因#1、检查之前是否配置#git config user.name git config user.email 2、使用命令查看原因#ssh -T -v g">
 
 
 
@@ -441,24 +441,24 @@
       
 
       
-        <h1 id="一、问题"><a href="#一、问题" class="headerlink" title="一、问题"></a>一、问题</h1><p>使用git连接github可能会出现Permission denied (publickey)问题。</p>
+        <h1><span id="yi-wen-ti">一、问题</span><a href="#yi-wen-ti" class="header-anchor">#</a></h1><p>使用git连接github可能会出现Permission denied (publickey)问题。</p>
 <p>使用命令：<code>ssh -T git@github.com</code></p>
 <p>错误： <code>Permission denied (publickey)</code></p>
-<h1 id="二、排查原因"><a href="#二、排查原因" class="headerlink" title="二、排查原因"></a>二、排查原因</h1><h2 id="1、检查之前是否配置"><a href="#1、检查之前是否配置" class="headerlink" title="1、检查之前是否配置"></a>1、检查之前是否配置</h2><p><code>git config user.name</code></p>
+<h1><span id="er-pai-cha-yuan-yin">二、排查原因</span><a href="#er-pai-cha-yuan-yin" class="header-anchor">#</a></h1><h2><span id="1-jian-cha-zhi-qian-shi-fou-pei-zhi">1、检查之前是否配置</span><a href="#1-jian-cha-zhi-qian-shi-fou-pei-zhi" class="header-anchor">#</a></h2><p><code>git config user.name</code></p>
 <p><code>git config user.email</code></p>
-<h2 id="2、使用命令查看原因"><a href="#2、使用命令查看原因" class="headerlink" title="2、使用命令查看原因"></a>2、使用命令查看原因</h2><p><code>ssh -T -v git@github.com</code></p>
+<h2><span id="2-shi-yong-ming-ling-cha-kan-yuan-yin">2、使用命令查看原因</span><a href="#2-shi-yong-ming-ling-cha-kan-yuan-yin" class="header-anchor">#</a></h2><p><code>ssh -T -v git@github.com</code></p>
 <p>发现是没有找到“id_rsa”等文件</p>
-<h2 id="3、查看文件"><a href="#3、查看文件" class="headerlink" title="3、查看文件"></a>3、查看文件</h2><p><code>ls ~/.ssh</code></p>
+<h2><span id="3-cha-kan-wen-jian">3、查看文件</span><a href="#3-cha-kan-wen-jian" class="header-anchor">#</a></h2><p><code>ls ~/.ssh</code></p>
 <p>检查有无1中的文件</p>
 <p>若无，生成SSH密钥并在github中配置。参见：</p>
 <p><a href="https://blog.csdn.net/huang3513/article/details/52837075" target="_blank" rel="noopener">SSH密钥</a></p>
 <p><a href="https://blog.csdn.net/lucky__yang/article/details/80148420" target="_blank" rel="noopener">生成SSH密钥连接github</a></p>
 <p>若有，检查id_rsa.pub文件中的末尾email和git是否一致，不一致，重新生成。</p>
 <p>（经检查发现有这一文件，但是email不一致，所以我重新生成并设置了SSH密钥解决了问题</p>
-<h1 id="三、连接"><a href="#三、连接" class="headerlink" title="三、连接"></a>三、连接</h1><p><code>ssh -T git@github.com</code></p>
+<h1><span id="san-lian-jie">三、连接</span><a href="#san-lian-jie" class="header-anchor">#</a></h1><p><code>ssh -T git@github.com</code></p>
 <p>如果提示如下，说明连接成功</p>
 <p><code>Hi Catherine-G! You&#39;ve successfully authenticated, but GitHub does not provide s    hell access.</code></p>
-<h1 id="四、总结"><a href="#四、总结" class="headerlink" title="四、总结"></a>四、总结</h1><p>就像电脑出现问题重启、重装，github连接不成功，重新生成SSH密钥就可以啦。</p>
+<h1><span id="si-zong-jie">四、总结</span><a href="#si-zong-jie" class="header-anchor">#</a></h1><p>就像电脑出现问题重启、重装，github连接不成功，重新生成SSH密钥就可以啦。</p>
 
       
     </div>
@@ -723,7 +723,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、问题"><span class="nav-number">1.</span> <span class="nav-text">一、问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、排查原因"><span class="nav-number">2.</span> <span class="nav-text">二、排查原因</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、检查之前是否配置"><span class="nav-number">2.1.</span> <span class="nav-text">1、检查之前是否配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、使用命令查看原因"><span class="nav-number">2.2.</span> <span class="nav-text">2、使用命令查看原因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、查看文件"><span class="nav-number">2.3.</span> <span class="nav-text">3、查看文件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、连接"><span class="nav-number">3.</span> <span class="nav-text">三、连接</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四、总结"><span class="nav-number">4.</span> <span class="nav-text">四、总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">1.</span> <span class="nav-text">一、问题#</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">2.</span> <span class="nav-text">二、排查原因#</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">2.1.</span> <span class="nav-text">1、检查之前是否配置#</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">2.2.</span> <span class="nav-text">2、使用命令查看原因#</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">2.3.</span> <span class="nav-text">3、查看文件#</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">3.</span> <span class="nav-text">三、连接#</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">4.</span> <span class="nav-text">四、总结#</span></a></li></ol></div>
             
 
           </div>
